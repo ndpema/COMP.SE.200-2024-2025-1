@@ -5,10 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "nyc mocha"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
+    "nyc": "^17.1.0"
+  }
 }
