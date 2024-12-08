@@ -4,22 +4,22 @@ import add from '../src/add.js';
 describe('Test add() from add.js', function() {
 
   // Parameters order
-  it('should work the same regardless of odd parameters order (integer +- integer)', function() {
+  it('should work the same regardless of parameters order (integer +- integer)', function() {
     for (let i = -100; i < 100; i += 1) {
       expect(add(123456789, 123456789 * i)).to.equal(add(123456789 * i, 123456789));
     }
   });
-  it('should work the same regardless of odd parameters order (decimal +- decimal)', function() {
+  it('should work the same regardless of parameters order (decimal +- decimal)', function() {
     for (let i = -100; i < 100; i += 1) {
       expect(add(0.000123456789, 0.00001 * i)).to.equal(add(0.00001 * i, 0.000123456789));
     }
   });
-  it('should work the same regardless of odd parameters order (integer +- decimal)', function() {
+  it('should work the same regardless of parameters order (integer +- decimal)', function() {
     for (let i = -100; i < 100; i += 1) {
       expect(add(123456789, 0.00001 * i)).to.equal(add(0.00001 * i, 123456789));
     }
   });
-  it('should work the same regardless of odd parameters order (decimal +- integer)', function() {
+  it('should work the same regardless of parameters order (decimal +- integer)', function() {
     for (let i = -100; i < 100; i += 1) {
       expect(add(0.000123456789, 123456789 * i)).to.equal(add(123456789 * i, 0.000123456789));
     }
