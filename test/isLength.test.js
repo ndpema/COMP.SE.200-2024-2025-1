@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import IsLength from '../src/isLength.js';
+import isLength from '../src/isLength.js';
 
 describe('Tests for isLength() from isLength.js', () => {
     it('should return true for valid lengths', () => {
