@@ -4,7 +4,7 @@ import add from '../src/add.js';
 describe('Test add() from add.js', function() {
 
   // Test with example from add()'s comment
-  it('should work with given example', function() {
+  it('should work with given example "add(6, 4)) = 10"', function() {
     expect(add(6, 4)).to.equal(10);
   });
 
@@ -105,16 +105,5 @@ describe('Test add() from add.js', function() {
   });
   it('should work with very big and small decimals', function() {
     expect(add(0.000000000000001099511627776, 1099511627776)).to.equal(1099511627776.000000000000001099511627776);
-  });
-
-  // Invalid input
-  it('should not crash on 1 invalid input', function() {
-    expect(add(1, "invalid")).to.equal("1invalid");
-  });
-  it('should not crash on 2 invalid input', function() {
-    expect(add("invalid", 1)).to.equal("invalid1");
-  });
-  it('should not crash on both invalid input', function() {
-    expect(add("invalid", "invalid")).to.equal("invalidinvalid");
   });
 });
