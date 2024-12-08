@@ -3,6 +3,11 @@ import add from '../src/add.js';
 
 describe('Test add() from add.js', function() {
 
+  // Test with example from add()'s comment
+  it('should work with given example', function() {
+    expect(add(6, 4)).to.equal(10);
+  });
+
   // Parameters order
   it('should work the same regardless of parameters order (integer +- integer)', function() {
     for (let i = -100; i < 100; i += 1) {
