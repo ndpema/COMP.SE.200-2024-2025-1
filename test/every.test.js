@@ -39,7 +39,7 @@ describe('Tests for every() from every.js', () => {
     });
 
     it('should return true for `null` arrays', () => {
-        const result = every([], Boolean);
+        const result = every(null, Boolean);
         expect(result).to.be.true;
     });
 })
