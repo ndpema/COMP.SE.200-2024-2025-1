@@ -59,20 +59,13 @@ describe('Test isEmpty() from isEmpty.js', function() {
 
   // Non empty
   it('should work with non empty Array', function() {
-    let array = new Array();
+    let array = new Array([1, 2, 3]);
     array[0] = 1;
     expect(isEmpty(array)).to.be.false;
   });
-  /*it('should work with non empty Map', function() {
-    let map = new Map();
-    map["a"] = "b";
-    expect(isEmpty(map)).to.be.false;
-  });
   it('should work with non empty Set', function() {
-    let set = new Set();
-    set.add("a");
-    expect(isEmpty(set)).to.be.false; // Comment says false, is it a bug?
-  });*/
+    expect(isEmpty(new Set([1, 2, 3]))).to.be.false; // Comment says false, is it a bug?
+  });
   it('should work with non empty buffer', function() {
     expect(isEmpty(Buffer.alloc(10))).to.be.false;
   });
