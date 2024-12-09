@@ -36,6 +36,25 @@ describe('Test eq() from eq.js', function() {
     expect(eq(2, 2)).to.be.true;
   });
   it('should work with non equal numbers', function() {
-    expect(eq(2, 1)).to.be.false;
+    expect(eq(2, -2)).to.be.false;
+  });
+  it('should work with non equal strings', function() {
+    expect(eq("abc", "cba")).to.be.false;
+  });
+  it('should work with null', function() {
+    expect(eq(null, null)).to.be.true;
+    expect(eq(null, true)).to.be.false;
+    expect(eq(null, false)).to.be.false;
+  });
+  it('should work with undefined', function() {
+    expect(eq(undefined, undefined)).to.be.true;
+    expect(eq(undefined, true)).to.be.false;
+    expect(eq(undefined, false)).to.be.false;
+  });
+  it('should work with boolean', function() {
+    expect(eq(true, true)).to.be.true;
+    expect(eq(true, false)).to.be.false;
+    expect(eq(false, true)).to.be.false;
+    expect(eq(false, false)).to.be.true;
   });
 });
