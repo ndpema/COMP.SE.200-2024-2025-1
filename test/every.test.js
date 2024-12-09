@@ -33,8 +33,13 @@ describe('Tests for every() from every.js', () => {
         expect(iterations).to.equal(3); // Stops after the third element
     });
 
-    it('should handle arrays with `null` or `undefined` elements', () => {
+    it('should handle arrays with `null` elements', () => {
         const result = every([true, 1, null, 'yes'], Boolean);
         expect(result).to.be.false;
+    });
+
+    it('should return true for `null` arrays', () => {
+        const result = every([], Boolean);
+        expect(result).to.be.true;
     });
 })
