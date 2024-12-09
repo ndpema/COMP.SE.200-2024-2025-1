@@ -26,4 +26,9 @@ describe('Test words() from words.js', () => {
         const result = words('!@#$%^&*()');
         expect(result).to.deep.equal([]);
     });
+
+    it('should handle strings that do not match pattern', () => {
+        const result = words('b', '[a]');
+        expect(result).to.deep.equal([]);
+    });
 })
